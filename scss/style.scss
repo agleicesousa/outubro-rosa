@@ -1,0 +1,164 @@
+// Definindo variáveis de cores e tamanhos
+$primary-color: #FF69B4;
+$secondary-color: #FFD9EC;
+$text-color: #000000;
+$white-color: #ffffff;
+$border-radius: 10px;
+$padding: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: $secondary-color;
+    color: $text-color;
+}
+
+header {
+    background-color: $primary-color;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+            max-width: 12vh;
+        }
+
+        h1 {
+            margin-left: 10px;
+            color: $white-color;
+            font-size: 38px;
+        }
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+
+        li a {
+            color: $white-color;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+
+            &.active {
+                background-color: $white-color;
+                color: $primary-color;
+                border-radius: $border-radius;
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: $padding;
+    height: 85vh;
+
+    .left {
+        width: 60%;
+        padding: 10px;
+
+        p {
+            font-size: 30px;
+            text-align: left;
+        }
+    }
+
+    img {
+        max-width: 40%;
+        border-radius: $border-radius;
+        object-fit: cover;
+    }
+}
+
+.middle-section {
+    padding: $padding;
+    display: flex;
+    text-align: center;
+    background-color: $primary-color;
+    align-items: center;
+    height: 70vh;
+
+    img {
+        max-width: 45%;
+        margin-right: $padding;
+        border-radius: $border-radius;
+    }
+
+    p {
+        font-size: 30px;
+        color: $white-color;
+        text-align: left;
+    }
+}
+
+.tips {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    height: 75vh;
+    align-items: center;
+
+    .tip {
+        text-align: center;
+        width: 25%;
+
+        img {
+            width: 35vh;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    color: $white-color;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: $padding;
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 10vh;
+            margin: 0 10px;
+        }
+    }
+
+    .about-us {
+        p {
+            margin: 10px 0;
+            font-size: 25px;
+        }
+    }
+
+    .logo-footer {
+        img {
+            max-width: 20vh;
+        }
+    }
+}
